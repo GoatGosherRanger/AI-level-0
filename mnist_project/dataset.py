@@ -1,7 +1,7 @@
 #流程 train_dataset → train_loader → batch of (images, labels) → 模型训练
 import torch
-from torchvision import datasets,transforms
-from torch.untils.data import DataLoader
+from torchvision import datasets,transforms #torchvision是官方提供的专门处理图像的工具包
+from torch.untils.data import DataLoader #torch.untils.data是数据处理基础库
 
 def get_dataloader(batch_size =64):        #batch_size 是干嘛的 --batch 是组的意思，=64意味着一次喂64个图片
     transform = transforms.Compose([
