@@ -37,7 +37,7 @@ def main():
     for epoch in range(1, epochs + 1):
         print(f"Epoch {epoch}/{epochs}")
         train(model, device, train_loader, optimizer, criterion, epoch)
-        test(model, device, test_loader, criterion)     #这几个参数是怎么知道要填这几个的，我们在写train和test的时候也没说啊
+        test(model, device, test_loader, criterion)     
 
     # 6. 保存模型
     torch.save(model.state_dict(), "model.pth")
